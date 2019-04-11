@@ -3,21 +3,37 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Alice's shop</title>
+		<link rel="stylesheet" href="media/css/style.css">
 		<meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
 	</head> 
-	<body style="background: blue; color: orange">
-		<nav> 
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="openinghours.html">Opening Hours</a></li>
-				<li><a href="products.html">Products</a></li>
-			</ul>
-		</nav>
-		<h1>Welcome to Alice's shop!</h1>
-		<div>
-			<p>This is a nice shop where you can buy stuff</p>
-			<p><strong>Kristian IV:s väg 3, Halmstad</strong></p>
+	<body>
+		<div class="container">
+			<nav class="navigation"> 
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="openinghours.html">Opening Hours</a></li>
+					<li><a href="products.html">Products</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<div class="column">	
+					<div>
+						<h1>Welcome to Alice's shop!</h1>
+						<div>
+							<p>This is a nice shop where you can buy stuff</p>
+							<p><strong>You can visit our shop: Kristian IV:s väg 3, Halmstad</strong></p>
+							<p>Or find us online on <a href="https://www.instagram.com/?hl=pt">Instagram</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div>
+						<p>Thank you for visiting</p>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
 		</div>
 	</body>
 </html>

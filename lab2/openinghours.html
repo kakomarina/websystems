@@ -3,28 +3,36 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Alice's shop</title>
+		<link rel="stylesheet" href="media/css/style.css">
 		<meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
 	</head>
 	<body>
-		<nav> 
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="openinghours.html">Opening Hours</a></li>
-				<li><a href="products.html">Products</a></li>
-			</ul>
-		</nav>
-		<h1>Opening hours</h1>
-		<p>Welcome to my shop, we are open the following hours:</p>
-		<ul>
-			<li>Mondays: 08:00-16:00</li>
-			<li>Tuesdays: 08:00-16:00</li>
-			<li>Wednesdays: 08:00-16:00</li>
-			<li>Thursdays: 08:00-16:00</li>
-			<li>Fridays: 08:00-14:00</li>
-			<li>Saturdays: Closed</li>
-			<li>Sundays: Closed</li>
-		</ul>
+		<div class="container">
+			<nav class="navigation"> 
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="openinghours.html" class="active">Opening Hours</a></li>
+					<li><a href="products.html">Products</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<div class="column">	
+					<h1>Opening hours</h1>
+					<p>Welcome to my shop, we are open the following hours:</p>
+					<ul>
+						<li>Mondays: 08:00-16:00</li>
+						<li>Tuesdays: 08:00-16:00</li>
+						<li>Wednesdays: 08:00-16:00</li>
+						<li>Thursdays: 08:00-16:00</li>
+						<li>Fridays: 08:00-14:00</li>
+						<li>Saturdays: Closed</li>
+						<li>Sundays: Closed</li>
+					</ul>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</div>
 	</body>
 
 </html>

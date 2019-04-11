@@ -3,49 +3,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Alice's shop</title>
+		<link rel="stylesheet" href="media/css/style.css">
 		<meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
 	</head>
 	<body>
-		<nav> 
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="openinghours.html">Opening Hours</a></li>
-				<li><a href="products.html">Products</a></li>
-			</ul>
-		</nav>
-		<h1>Products</h1>
-		<table border="1" cellpadding="4">
-			<tr>
-				<th>Product</th>
-				<th>Description</th>
-				<th>Size</th>
-				<th>Price</th>
-			</tr>
-			<tr>
-				<td>Milk</td>
-				<td>Straight from a cow</td>
-				<td>1L</td>
-				<td>10.00SEK</td>
-			</tr>
-			<tr>
-				<td>Cereal</td>
-				<td>Goes well with milk</td>
-				<td rowspan="2">500g</td>
-				<td>20.00SEK</td>
-			</tr>
-			<tr>
-				<td>Bread</td>
-				<td>Good for sandwich</td>
-				<td>15.00SEK</td>
-			</tr>
-			<tr>
-				<td>Butter</td>
-				<td>With salt</td>
-				<td>200g</td>
-				<td>10.00SEK</td>
-			</tr>
-		</table>
+		<div class="container">
+			<nav class="navigation"> 
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="openinghours.html">Opening Hours</a></li>
+					<li><a href="products.html" class="active">Products</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<div class="column">
+					<h1>Products</h1>
+					<table border="1" cellpadding="4">
+						<tr>
+							<th>Product</th>
+							<th>Description</th>
+							<th>Size</th>
+							<th>Price</th>
+						</tr>
+						<tr>
+							<td>Milk</td>
+							<td>Straight from a cow</td>
+							<td>1L</td>
+							<td>10.00SEK</td>
+						</tr>
+						<tr>
+							<td>Cereal</td>
+							<td>Goes well with milk</td>
+							<td rowspan="2">500g</td>
+							<td>20.00SEK</td>
+						</tr>
+						<tr>
+							<td>Bread</td>
+							<td>Good for sandwich</td>
+							<td>15.00SEK</td>
+						</tr>
+						<tr>
+							<td>Butter</td>
+							<td>With salt</td>
+							<td>200g</td>
+							<td>10.00SEK</td>
+						</tr>
+					</table>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</div>
 	</body>
 
 </html>
