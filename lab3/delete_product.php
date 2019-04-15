@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Delete product</title>
+</head>
 <?php
 include_once('template.php');
 if (isset($_GET['id']) and isset($_SESSION['userId'])) {
@@ -10,3 +15,4 @@ END;
 }
 echo $navigation;
 ?>
+</html>

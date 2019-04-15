@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Details</title>
+</head>
 <?php
 include_once('template.php');
 $content = '<h1>Product Details</h1>';
@@ -10,10 +15,10 @@ END;
  if ($res->num_rows > 0) {
  $row = $res->fetch_object();
  $content = <<<END
-Product id: {$row->id}<br>
- Title: {$row->name}<br>
- Price: {$row->price}<br>
- Description: {$row->description}<br>
+<hr>Product id: {$row->id}<hr>
+ Title: {$row->name}<hr>
+ Price: {$row->price}<hr>
+ Description: {$row->description}<hr>
  Date: {$row->created_at}
 END;
  }
@@ -21,3 +26,4 @@ END;
 echo $navigation;
 echo $content;
 ?>
+</html>

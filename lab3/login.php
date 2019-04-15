@@ -1,10 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+</head>
 <?php
 include('template.php');
 if (isset($_POST['username']) and isset($_POST['password'])) {
- $stmt = $mysqli->prepare('SELECT * FROM users WHERE username = ? and password = ?');
- $stmt->bind_param('ss', $_POST['username'], $_POST['password']); // 's' specifies the variable type => 'string'
- $stmt->execute();
- $result = $stmt->get_result();
+ $name = $mysqli->real_escape_string($_POST['username']);
+ $pwd = $mysqli->real_escape_string($_POST['password']);
+ $query = <<<END
+SELECT username, password, id FROM users
+ WHERE username = '{$name}'
+ AND password = '{$pwd}'
+END;
+ $result = $mysqli->query($query);
 
  if($result->num_rows > 0) {
  $row = $result->fetch_object();
@@ -25,3 +34,4 @@ END;
 echo $navigation;
 echo $content;
 ?>
+</html>

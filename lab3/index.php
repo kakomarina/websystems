@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <title>Webshop</title>
 </head>
@@ -11,6 +11,7 @@ $content = <<<END
 <p>
 This is gonna be a webshop
 </p>
+<img src="shop.jpg">
 END;
 echo $navigation;
 echo $content;

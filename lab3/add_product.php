@@ -1,9 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Add product</title>
+</head>
 <?php
 include_once('template.php');
 if (isset($_POST['name'])) {
+	$name = $mysqli->real_escape_string($_POST['name']);
+	$price = $mysqli->real_escape_string($_POST['price']);
+	$descrip = $mysqli->real_escape_string($_POST['description']);
  $query = <<<END
 INSERT INTO products(name,price,description)
- VALUES('{$_POST['name']}','{$_POST['price']}','{$_POST['description']}')
+ VALUES('$name','$price','$descrip')
 END;
  $mysqli->query($query);
  echo 'Product added to the database!';
@@ -21,3 +29,4 @@ END;
 echo $navigation;
 echo $content;
 ?>
+</html>

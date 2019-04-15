@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>About</title>
+</head>
 <meta charset="utf-8">
 <?php
 include('template.php');
@@ -16,3 +21,4 @@ END;
 echo $navigation;
 echo $content;
 ?>
+</html>

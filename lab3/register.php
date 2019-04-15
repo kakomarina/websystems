@@ -1,10 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register</title>
+</head>
 <?php
 include('template.php');
 if (isset($_POST['username']) and isset($_POST['password'])) {
+	$username = $mysqli->real_escape_string($_POST['username']);
+	$password = $mysqli->real_escape_string($_POST['password']);
+	$email = $mysqli->real_escape_string($_POST['email']);
+	$fname = $mysqli->real_escape_string($_POST['fname']);
+	$lname = $mysqli->real_escape_string($_POST['lname']); 
  $query = <<<END
 INSERT INTO users(username,password,email,fname,lname)
- VALUES('{$_POST['username']}','{$_POST['password']}','
- {$_POST['email']}','{$_POST['fname']}','{$_POST['lname']}')
+ VALUES('$username','$password','
+ $email','$fname','$lname')
 END;
  if ($mysqli->query($query) !== TRUE) {
  die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
@@ -12,6 +22,7 @@ END;
  }
 }
 $content = <<<END
+<br>
 <form method="post" action="register.php">
 <input type = "text" name="username" placeholder="username" ><br>
 <input type="password" name="password" placeholder="password"><br>
@@ -25,3 +36,4 @@ END;
 echo $navigation;
 echo $content;
 ?>
+</html>

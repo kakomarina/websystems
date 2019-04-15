@@ -1,11 +1,13 @@
 <?php
 include('template.php');
 if (isset($_POST)) {
+	$name = htmlspecialchars($_POST["name"]); 
+	$msg = htmlspecialchars($_POST["msg"]); 
  $content = <<<END
 <h3>Message was sent:</h3>
- Name: {$_POST["name"]}
+ Name: {$name}
  <br>
- Message: {$_POST["msg"]}
+ Message: {$msg}
 END;
  $to = "marsle19@student.hh.se";
  $subject = "Test-mail";

@@ -10,21 +10,21 @@ $db = "marsle19_db";
 $mysqli = new mysqli($host, $user, $pwd, $db);
 $navigation = <<<END
  <nav>
- <a href="index.php">Home</a>
- <a href="about.php">About</a>
+ <a href="index.php">Home</a> | 
+ <a href="about.php">About</a> | 
  <a href="products.php">Products</a>
 END;
 
 if (isset($_SESSION['userId'])){
  $navigation .= <<<END
- <a href="add_product.php">Add product</a>
- <a href="register.php">Register</a>
- <a href="logout.php">Logout</a>
- Logged in as {$_SESSION['username']}
+  | <a href="add_product.php">Add product</a>
+  | <a href="register.php">Register</a>
+  | <a href="logout.php">Logout</a>
+  | Logged in as {$_SESSION['username']}
 END;
 } else{
  $navigation .= <<<END
- <a href="login.php">Login</a>
+  | <a href="login.php">Login</a>
 END;
 } 
 $navigation .= '</nav>';
